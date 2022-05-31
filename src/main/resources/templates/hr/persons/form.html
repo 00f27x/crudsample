@@ -19,6 +19,18 @@
 
 <body class="bg-dark">
 
+    <header>
+        <nav class="navbar navbar-da bg-light">
+            <div class="container">
+                <a class="navbar-brand" th:href="@{/hr/persons/list}">MSCRUD>_</a>
+                <nav>
+                    <a class="m-2 btn" th:href="@{new}">Cadastrar Pessoa</a>
+                    <a class="m-2 btn" th:href="@{new}">Alterar Pessoa</a>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
     <div class="container mt-5 w-50 bg-light p-4 rounded shadow">
         <h2 class="mb-5">Novo cadastro</h2>
         <form action="#" th:action="@{/hr/persons/save}" th:object="${person}" class="mt-5" method="POST">
@@ -54,12 +66,13 @@
                 <div class="col-6">
                     <div class="form-group m-3">
                         <label for="phone">Telefone</label>
-                        <input type="tel" class="form-control" placeholder="telefone" name="" id="phone" th:field="*{phone}">
+                        <input type="tel" class="form-control" placeholder="telefone" name="" id="phone"
+                            th:field="*{phone}">
                     </div>
                 </div>
             </div>
             <div class="form-group d-flex justify-content-center">
-                <a th:href="@{/hr/persons/}" class="btn btn-outline-dark m-3">Voltar</a>
+                <a th:href="@{/hr/persons/list}" class="btn btn-outline-dark m-3">Voltar</a>
                 <input type="submit" class="btn btn-dark m-3" value="Salvar">
             </div>
         </form>
