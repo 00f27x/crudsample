@@ -18,7 +18,7 @@ public class Person {
 
     private String name;
 
-    @DateTimeFormat(style = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 
     private String cpf;

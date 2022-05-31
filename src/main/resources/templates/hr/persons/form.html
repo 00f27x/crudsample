@@ -21,26 +21,26 @@
 
     <div class="container mt-5 w-50 bg-light p-4 rounded shadow">
         <h2 class="mb-5">Novo cadastro</h2>
-        <form action="" class="mt-5 ">
+        <form action="#" th:action="@{/hr/persons/save}" th:object="${person}" class="mt-5" method="POST">
             <div class="form-row">
                 <div class="form-col">
                     <div class=" form-group m-3">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" placeholder="nome" name="" id="nome">
+                        <input type="text" class="form-control" placeholder="nome" name="" id="name" th:field="*{name}">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group m-3">
-                        <label for="nome">Data de nascimento</label>
-                        <input type="date" class="form-control" name="" id="">
+                        <label for="birthdate">Data de nascimento</label>
+                        <input type="date" class="form-control" name="" id="birthdate" th:field="*{birthDate}">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group m-3">
                         <label for="nome">CPF</label>
-                        <input type="text" class="form-control" placeholder="cpf" name="" id="">
+                        <input type="text" class="form-control" placeholder="cpf" name="" id="" th:field="*{cpf}">
                     </div>
                 </div>
             </div>
@@ -48,13 +48,13 @@
                 <div class="col-6">
                     <div class="form-group m-3">
                         <label for="nome">Email</label>
-                        <input type="email" class="form-control" placeholder="email" name="" id="">
+                        <input type="email" class="form-control" placeholder="email" name="" id="" th:field="*{email}">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group m-3">
-                        <label for="nome">Telefone</label>
-                        <input type="tel" class="form-control" placeholder="telefone" name="" id="">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" class="form-control" placeholder="telefone" name="" id="phone" th:field="*{phone}">
                     </div>
                 </div>
             </div>
